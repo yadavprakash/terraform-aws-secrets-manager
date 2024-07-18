@@ -24,7 +24,7 @@ To use this module, you should have Terraform installed and configured for AWS. 
 # Create EC2 instances
 module "secrets_manager" {
 
-  source      = "git::https://github.com/opsstation/terraform-aws-secrets-manager.git?ref=v1.0.0"
+  source      = "git::https://github.com/yadavprakash/terraform-aws-secrets-manager.git?ref=v1.0.0"
   name        = local.name
   environment = local.environment
 
@@ -50,7 +50,7 @@ This example demonstrates how to create various AWS resources using the provided
 
 ```hcl
 module "secrets_manager" {
-  source      = "git::https://github.com/opsstation/terraform-aws-secrets-manager.git?ref=v1.0.0"
+  source      = "git::https://github.com/yadavprakash/terraform-aws-secrets-manager.git?ref=v1.0.0"
 
   name        = local.name
   environment = local.environment
@@ -75,7 +75,7 @@ module "secrets_manager" {
 
 ```hcl
 module "secrets_manager" {
-  source      = "git::https://github.com/opsstation/terraform-aws-secrets-manager.git?ref=v1.0.0"
+  source      = "git::https://github.com/yadavprakash/terraform-aws-secrets-manager.git?ref=v1.0.0"
 
   name        = local.name
   environment = local.environment
@@ -111,14 +111,14 @@ module "secrets_manager" {
 ```
 
 ## Examples
-For detailed examples on how to use this module, please refer to the [examples](https://github.com/opsstation/terraform-aws-secrets-manager/tree/master/_example) directory within this repository.
+For detailed examples on how to use this module, please refer to the [examples](https://github.com/yadavprakash/terraform-aws-secrets-manager/tree/master/_example) directory within this repository.
 
 ## License
-This Terraform module is provided under the **MIT** License. Please see the [LICENSE](https://github.com/opsstation/terraform-aws-secrets-manager/blob/master/LICENSE) file for more details.
+This Terraform module is provided under the **MIT** License. Please see the [LICENSE](https://github.com/yadavprakash/terraform-aws-secrets-manager/blob/master/LICENSE) file for more details.
 
 ## Author
 Your Name
-Replace **MIT** and **opsstation** with the appropriate license and your information. Feel free to expand this README with additional details or usage instructions as needed for your specific use case.
+Replace **MIT** and **yadavprakash** with the appropriate license and your information. Feel free to expand this README with additional details or usage instructions as needed for your specific use case.
 
 
 <!-- BEGIN_TF_DOCS -->
@@ -139,7 +139,7 @@ Replace **MIT** and **opsstation** with the appropriate license and your informa
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_labels"></a> [labels](#module\_labels) | git::https://github.com/opsstation/terraform-aws-labels.git | v1.0.0 |
+| <a name="module_labels"></a> [labels](#module\_labels) | git::https://github.com/yadavprakash/terraform-aws-labels.git | v1.0.0 |
 
 ## Resources
 
@@ -159,11 +159,11 @@ Replace **MIT** and **opsstation** with the appropriate license and your informa
 | <a name="input_enabled"></a> [enabled](#input\_enabled) | Flag to control the vpc creation. | `bool` | `true` | no |
 | <a name="input_environment"></a> [environment](#input\_environment) | Environment (e.g. `prod`, `dev`, `staging`). | `string` | `""` | no |
 | <a name="input_label_order"></a> [label\_order](#input\_label\_order) | Label order, e.g. `name`. | `list(any)` | <pre>[<br>  "name",<br>  "environment"<br>]</pre> | no |
-| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy, eg 'opsstation' | `string` | `"opsstation"` | no |
+| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy, eg 'yadavprakash' | `string` | `"yadavprakash"` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name  (e.g. `app` or `cluster`). | `string` | `""` | no |
 | <a name="input_recovery_window_in_days"></a> [recovery\_window\_in\_days](#input\_recovery\_window\_in\_days) | Specifies the number of days that AWS Secrets Manager waits before it can delete the secret. This value can be 0 to force deletion without recovery or range from 7 to 30 days. | `number` | `30` | no |
 | <a name="input_replica"></a> [replica](#input\_replica) | Configuration block to support secret replication | `map(any)` | `{}` | no |
-| <a name="input_repository"></a> [repository](#input\_repository) | Terraform current module repo | `string` | `"https://github.com/opsstation/terraform-aws-secrets-manager"` | no |
+| <a name="input_repository"></a> [repository](#input\_repository) | Terraform current module repo | `string` | `"https://github.com/yadavprakash/terraform-aws-secrets-manager"` | no |
 | <a name="input_rotation_lambda_arn"></a> [rotation\_lambda\_arn](#input\_rotation\_lambda\_arn) | Specifies the ARN of the Lambda function that can rotate the secret | `string` | `""` | no |
 | <a name="input_rotation_rules"></a> [rotation\_rules](#input\_rotation\_rules) | A structure that defines the rotation configuration for this secret | `map(any)` | `{}` | no |
 | <a name="input_secrets"></a> [secrets](#input\_secrets) | List of secrets to keep in AWS Secrets Manager | `any` | `[]` | no |
