@@ -24,7 +24,7 @@ To use this module, you should have Terraform installed and configured for AWS. 
 # Create EC2 instances
 module "secrets_manager" {
 
-  source      = "git::https://github.com/yadavprakash/terraform-aws-secrets-manager.git?ref=v1.0.0"
+  source      = "git::https://github.com/yadavprakash/terraform-aws-secrets-manager.git"
   name        = local.name
   environment = local.environment
 
@@ -50,7 +50,7 @@ This example demonstrates how to create various AWS resources using the provided
 
 ```hcl
 module "secrets_manager" {
-  source      = "git::https://github.com/yadavprakash/terraform-aws-secrets-manager.git?ref=v1.0.0"
+  source      = "git::https://github.com/yadavprakash/terraform-aws-secrets-manager.git"
 
   name        = local.name
   environment = local.environment
@@ -75,7 +75,7 @@ module "secrets_manager" {
 
 ```hcl
 module "secrets_manager" {
-  source      = "git::https://github.com/yadavprakash/terraform-aws-secrets-manager.git?ref=v1.0.0"
+  source      = "git::https://github.com/yadavprakash/terraform-aws-secrets-manager.git"
 
   name        = local.name
   environment = local.environment
